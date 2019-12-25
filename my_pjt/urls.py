@@ -17,13 +17,13 @@ from django.conf.urls import url, include
 from django.urls import path
 from django.contrib import admin
 from rest_framework import routers
-from board.views import HobbyViewSet
+# from board.views import HobbyViewSet
 
-router = routers.DefaultRouter()
-router.register('board', HobbyViewSet)
+# router = routers.DefaultRouter()
+# router.register('board', HobbyViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('board/', include('board.urls')),
-    path('/', include(router.urls)),
+    # path('board/', include('board.urls')),
+    # path('/', include(router.urls)),
 ]

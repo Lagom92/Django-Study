@@ -1,12 +1,12 @@
 from django.db import models
 
-class Hobby(models.Model):
-    title = models.CharField(max_length=30)
-    maker = models.CharField(max_length=15)
-    content = models.TextField()
+# class Hobby(models.Model):
+#     title = models.CharField(max_length=30)
+#     maker = models.CharField(max_length=15)
+#     content = models.TextField()
 
-    def __str__(self):
-        return self.title
+#     def __str__(self):
+#         return self.title
 
 class Paper(models.Model):
     title = models.CharField(max_length=100)
