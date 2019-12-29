@@ -9,10 +9,6 @@ from .models import Paper
 #     serializer_class = HobbySerializer
 
 
-def list(request):
+def listFBV(request):
     papers = Paper.objects.all()
-    print(papers)
-    datas = {
-        'papers':papers
-    }
-    return render(request, 'board/index.html', datas)
+    return render(request, 'board/index.html', {'papers':papers})
