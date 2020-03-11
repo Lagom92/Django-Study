@@ -1,36 +1,17 @@
-# About Django
+# Study Django
 
 
-> Django를 공부하자!
+<br/>
 
+### Django를 공부해보자.
 
+- 공식문서
 
-### Do
-구현하고자 하는 것들을 기록(잊어먹으니 기록하자!)
-- FBV의 CRUD
-- CBV의 CRUD
-- 소셜 로그인
-- Elasticsearch
+https://docs.djangoproject.com/ko/3.0/
 
+를 참고해서 공부해보자.
 
-### Did
-구현한 것을 기록
--  
+<br/>
 
-
-### Uses
-
-```
-$ python manage.py runserver
-```
-
-
-
-### 폴더 구조
-
-- doc
-
-자료들을 모아 두는 곳
-
-
+> 이번 기회에 공식문서를 제대로 읽어보자!
 
