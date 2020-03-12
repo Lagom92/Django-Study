@@ -15,3 +15,9 @@ https://docs.djangoproject.com/ko/3.0/
 
 > 이번 기회에 공식문서를 제대로 읽어보자!
 
+
+<br/>
+
+### tutorial
+
+- 설문조사 어플리케이션 만들기 
