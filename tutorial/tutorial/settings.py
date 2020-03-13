@@ -73,13 +73,16 @@ WSGI_APPLICATION = 'tutorial.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+DATABASES = { 
+    'default': { 
+        'ENGINE': 'django.db.backends.mysql', # mysql 엔진 설정 
+        'NAME':'tutorial', # 데이터베이스 이름 
+        'USER':'root', # 데이터베이스 연결시 사용할 유저 이름 
+        'PASSWORD':'0189', # 유저 패스워드 
+        'HOST':'127.0.0.1', 
+        'PORT':''
+    } 
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
