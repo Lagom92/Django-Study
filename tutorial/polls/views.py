@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse
-from .models import Question
+from django.http import HttpResponse, HttpResponseRedirect
+from django.urls import reverse
+from .models import Question, Choice
+
 
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
@@ -22,4 +24,16 @@ def results(request, id):
     return HttpResponse(response)
 
 def vote(request, id):
-    return HttpResponse(f"Vote {id}번 question")
+    question = get_object_or_404(Question, id=id)
+    try:
+        selected_choice = question.choice_set.get(id=request.POST['choice'])
+    except:
+        context = {
+            'question': question,
+            'error_message': "선택을 하지 않았습니다."
+        }
+        return render(request, 'polls/detail.html', context)
+    else:
+        selected_choice.votes += 1
+        selected_choice.save()
+        return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
